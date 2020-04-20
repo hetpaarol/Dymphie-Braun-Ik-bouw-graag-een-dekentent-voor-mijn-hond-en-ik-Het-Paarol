@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="sg:pagetag" content=""><meta name="sg:flowtag" content=""><title>Het Parool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body onload="resize();"><script src="optiextension_data/jquery-3.js"></script><script src="optiextension_data/jquery-ui.js"></script><script src="optiextension_data/jsrender.js"></script><style>
+@font-face {
+  font-family: Balto;
+  src: url(https://ims.parool.nl/images/Fonts/Balto-Bold.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Balto-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Balto;
+  src: url(https://ims.parool.nl/images/Fonts/Balto-Book.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Balto-Book.woff) format("woff");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Balto;
+  src: url(https://ims.parool.nl/images/Fonts/Balto-Light.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Balto-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-Black.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-Black.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-BlackItalic.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-BlackItalic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-Semibold.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-Semibold.woff) format("woff");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-SemiboldItalic.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-SemiboldItalic.woff) format("woff");
+  font-weight: 500;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-Light.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Quarto;
+  src: url(https://ims.parool.nl/images/Fonts/Quarto-LightItalic.woff2) format("woff2"), url(https://ims.parool.nl/images/Fonts/Quarto-LightItalic.woff) format("woff");
+  font-weight: 300;
+  font-style: italic
+}
+
+
+html {
+ overflow:hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+ overflow:hidden;
+ padding: 0;
+ margin: 0;
+ line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+.col {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+}
+   .ok{
+ display:none;
+   }
+
+   .dok{
+ text-decoration:underline;
+ cursor:pointer;
+    }
+
+.newsletter__body {
+    overflow: hidden;
+}
+
+.component-header:after {
+    display: table;
+    clear: both;
+    content: ' ';
+}
+
+.newsletter__form-container:after {
+    display: table;
+    clear: both;
+    content: ' ';
+}
+
+.newsletter__input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.newsletter__input {
+ font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+    padding: 0px 0px 0px 13px;
+ height:35px;
+ margin:0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    position: relative;
+    width: auto;
+    float:left;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 341px;
+}
+
+
+.button {
+ font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0097d8;
+    padding: 10px;
+    border: 0;
+    cursor:pointer;
+    float: left;
+    margin-left:10px;
+    width: 165px;
+    height:35px;
+}
+
+
+.newsletter__input::-webkit-input-placeholder {
+    color: #bbb
+}
+
+.newsletter__input::-moz-placeholder {
+    color: #bbb
+}
+
+.newsletter__input:-ms-input-placeholder {
+    color: #bbb
+}
+
+.newsletter__input::placeholder {
+    color: #bbb
+}
+
+.col {
+    max-width: 100%;
+    padding: 30px;
+}
+
+
+.component-title {
+font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+font-size:24px;
+color:#000000;
+font-weight:bold;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+.newsletter__body {
+    overflow: hidden;
+}
+
+.newsletter__form-container {
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: .3s ease-in-out transform;
+}
+
+.newsletter__form {
+    position: relative;
+    float: left;
+}
+
+.form {
+    display: block;
+    margin: 0 auto;
+ width: 100%;
+}
+
+.newsletter__confirmation {
+    position: relative;
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
+.newsletter__congratulations {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.newsletter__description {
+font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+    margin-top: 0;
+    font-size: 1em;
+    line-height: 1.125;
+ color:#111;
+}
+
+.newsletter__congratulations, .newsletter__question {
+font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+ color:#111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: balto,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 1em;
+    font-weight: 700;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow: hidden;
+    margin:8px 0px;
+}
+
+br+br {
+    display: block;
+    height: .3em;
+    content: '';
+}
+
+.newsletter__confirmation:after {
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+@media only screen and (max-width: 600px) {
+ .button{
+ width:100% !important;
+ margin-left:0px !important;
+ margin-top:10px !important;
+ }
+ .newsletter__input{
+ width:95% !important;
+ }
+}
+</style><script id="newsletterTemplate" type="text/x-jsrender" data-jsv-tmpl="jsvTmpl"><div class="row"><div class="col"><section class="component newsletter fjs-newsletter-subscription"><div class="component__body newsletter__body"><div class="submit newsletter__form-container fjs-newsletter-container"><div id="mc_embed_signup" class="form newsletter__form fjs-newsletter-form" aria-hidden="false" data-ns="{{:newsletterId}}"><h1 class="component-title"><span>{{:name}}</span></h1><h2 class="newsletter__question">
+ {{:~getQuestion(consentQuestions)}}
+                            </h2><div class="newsletter__input-container"><input id="MAIL" name="MAIL" class="newsletter__input fjs-newsletter-input" type="email" placeholder="Uw e-mailadres" aria-label="Uw e-mailadres" data-validate="true" required="required"><button class="go button button--navigation-style button--large newsletter__button" data-gtm="nieuwsbrief/promo/button"><span class="newsletter__button-text">Inschrijven</span></button></div></div></div><div style="margin: 15px 0;"><div class="newsletter__confirmation fjs-newsletter-confirmation ok"><h2 class="newsletter__congratulations optouttxt">U heeft zich ingeschreven voor de {{:name}}.<br><br> Wilt u zich <span class="dok">uitschrijven</span>? <span class="dok_extra"></span></h2></div></div></div></section></div></div></script><div id="newsletterList" class="sim"><div class="row"><div class="col"><section class="component newsletter fjs-newsletter-subscription"><div class="component__body newsletter__body"><div class="submit newsletter__form-container fjs-newsletter-container"><div id="mc_embed_signup" class="form newsletter__form fjs-newsletter-form" aria-hidden="false" data-ns="593fdd5aa80e6373ffb35cfd"><h1 class="component-title"><span>Dagelijkse nieuwsbrief</span></h1><h2 class="newsletter__question">
+ <span class="nscontent">Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen.</span><span style="display:none;" class="nscontent cons_id" data-ci="54958238-9943-4f96-a3ca-4426e8952075"></span>
+                            </h2><div class="newsletter__input-container"><input id="MAIL" name="MAIL" class="newsletter__input fjs-newsletter-input" type="email" placeholder="Uw e-mailadres" aria-label="Uw e-mailadres" data-validate="true" required="required"><button class="go button button--navigation-style button--large newsletter__button" data-gtm="nieuwsbrief/promo/button"><span class="newsletter__button-text">Inschrijven</span></button></div></div></div><div style="margin: 15px 0;"><div class="newsletter__confirmation fjs-newsletter-confirmation ok"><h2 class="newsletter__congratulations optouttxt">U heeft zich ingeschreven voor de Dagelijkse nieuwsbrief.<br><br> Wilt u zich <span class="dok">uitschrijven</span>? <span class="dok_extra"></span></h2></div></div></div></section></div></div></div><div id="simspacing"></div><script type="text/javascript">
+$.noConflict();
+var email = '';
+
+ //var newsletter = JSON.parse('{&quot;_embedded&quot;:{},&quot;newsletterId&quot;:&quot;593fdd5aa80e6373ffb35cfd&quot;,&quot;name&quot;:&quot;Dagelijkse nieuwsbrief&quot;,&quot;description&quot;:&quot;Elke dag het laatste nieuws vanuit Amsterdam.&quot;,&quot;leadingImage&quot;:&quot;&quot;,&quot;shortName&quot;:&quot;lunch&quot;,&quot;consentData&quot;:[{&quot;flavour&quot;:&quot;generic_nl_u&quot;,&quot;businessKey&quot;:&quot;Generic-Daily-NL-U&quot;},{&quot;flavour&quot;:&quot;com_generic_nl_je&quot;,&quot;businessKey&quot;:&quot;Com-Generic-Daily-NL-JE&quot;},{&quot;flavour&quot;:&quot;gdpr_cmplnt_dscr&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL&quot;},{&quot;flavour&quot;:&quot;dc_default&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL&quot;},{&quot;flavour&quot;:&quot;dc_theiraccount&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL&quot;},{&quot;flavour&quot;:&quot;dc_myaccount&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL-corona&quot;},{&quot;flavour&quot;:&quot;dc_landingpage&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL-corona&quot;},{&quot;flavour&quot;:&quot;dc_signup_form&quot;,&quot;businessKey&quot;:&quot;HP-dagelijks-NL-corona&quot;}],&quot;consentQuestions&quot;:[{&quot;consentQuestionId&quot;:&quot;650474f9-9523-4dcd-8316-35f8693282b8&quot;,&quot;flavour&quot;:&quot;generic_nl_u&quot;,&quot;question&quot;:&quot;Wilt u elke dag de Dagelijkse nieuwsbrief nieuwsbrief van Het Parool ontvangen via e-mail?&quot;},{&quot;consentQuestionId&quot;:&quot;8a88a002-0174-464f-bb48-11d48d9f6f7c&quot;,&quot;flavour&quot;:&quot;com_generic_nl_je&quot;,&quot;question&quot;:&quot;Ja, ik wil de Dagelijkse nieuwsbrief nieuwsbrief van Het Parool ontvangen via e-mail&quot;},{&quot;consentQuestionId&quot;:&quot;1c0c259d-ceac-494b-bb41-b3cc7091d85e&quot;,&quot;flavour&quot;:&quot;gdpr_cmplnt_dscr&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen.&quot;},{&quot;consentQuestionId&quot;:&quot;1c0c259d-ceac-494b-bb41-b3cc7091d85e&quot;,&quot;flavour&quot;:&quot;dc_default&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen.&quot;},{&quot;consentQuestionId&quot;:&quot;1c0c259d-ceac-494b-bb41-b3cc7091d85e&quot;,&quot;flavour&quot;:&quot;dc_theiraccount&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen.&quot;},{&quot;consentQuestionId&quot;:&quot;54958238-9943-4f96-a3ca-4426e8952075&quot;,&quot;flavour&quot;:&quot;dc_myaccount&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen.&quot;},{&quot;consentQuestionId&quot;:&quot;54958238-9943-4f96-a3ca-4426e8952075&quot;,&quot;flavour&quot;:&quot;dc_landingpage&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen.&quot;},{&quot;consentQuestionId&quot;:&quot;54958238-9943-4f96-a3ca-4426e8952075&quot;,&quot;flavour&quot;:&quot;dc_signup_form&quot;,&quot;question&quot;:&quot;Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen.&quot;}],&quot;previewUrl&quot;:&quot;https:&#x2F;&#x2F;ims.parool.nl&#x2F;optiext&#x2F;optiextension.dll?ID=XzsXr6qv5CBK%2BxnInEGe28hcfy5gFg7p6mkRZ2Nv2xqT%2B5YbaSz0osoxodJo6_lshhRl7x%2BdQhOKjlLxZL&amp;MTID=4230&quot;}')
+ var newsletter = JSON.parse('{"_embedded":{},"newsletterId":"593fdd5aa80e6373ffb35cfd","name":"Dagelijkse nieuwsbrief","description":"Elke dag het laatste nieuws vanuit Amsterdam.","leadingImage":"","shortName":"lunch","consentData":[{"flavour":"generic_nl_u","businessKey":"Generic-Daily-NL-U"},{"flavour":"com_generic_nl_je","businessKey":"Com-Generic-Daily-NL-JE"},{"flavour":"gdpr_cmplnt_dscr","businessKey":"HP-dagelijks-NL"},{"flavour":"dc_default","businessKey":"HP-dagelijks-NL"},{"flavour":"dc_theiraccount","businessKey":"HP-dagelijks-NL"},{"flavour":"dc_myaccount","businessKey":"HP-dagelijks-NL-corona"},{"flavour":"dc_landingpage","businessKey":"HP-dagelijks-NL-corona"},{"flavour":"dc_signup_form","businessKey":"HP-dagelijks-NL-corona"}],"consentQuestions":[{"consentQuestionId":"650474f9-9523-4dcd-8316-35f8693282b8","flavour":"generic_nl_u","question":"Wilt u elke dag de Dagelijkse nieuwsbrief nieuwsbrief van Het Parool ontvangen via e-mail?"},{"consentQuestionId":"8a88a002-0174-464f-bb48-11d48d9f6f7c","flavour":"com_generic_nl_je","question":"Ja, ik wil de Dagelijkse nieuwsbrief nieuwsbrief van Het Parool ontvangen via e-mail"},{"consentQuestionId":"1c0c259d-ceac-494b-bb41-b3cc7091d85e","flavour":"gdpr_cmplnt_dscr","question":"Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen."},{"consentQuestionId":"1c0c259d-ceac-494b-bb41-b3cc7091d85e","flavour":"dc_default","question":"Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen."},{"consentQuestionId":"1c0c259d-ceac-494b-bb41-b3cc7091d85e","flavour":"dc_theiraccount","question":"Ja, ik wil elke dag het laatste nieuws vanuit Amsterdam ontvangen."},{"consentQuestionId":"54958238-9943-4f96-a3ca-4426e8952075","flavour":"dc_myaccount","question":"Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen."},{"consentQuestionId":"54958238-9943-4f96-a3ca-4426e8952075","flavour":"dc_landingpage","question":"Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen."},{"consentQuestionId":"54958238-9943-4f96-a3ca-4426e8952075","flavour":"dc_signup_form","question":"Ja, ik wil elke dag het laatste nieuws over het coronavirus vanuit Amsterdam ontvangen."}],"previewUrl":"https://ims.parool.nl/optiext/optiextension.dll?ID=XzsXr6qv5CBK%2BxnInEGe28hcfy5gFg7p6mkRZ2Nv2xqT%2B5YbaSz0osoxodJo6_lshhRl7x%2BdQhOKjlLxZL&MTID=4230"}');
+function getConsentQuestion(input, output) {
+ var cq = getConsent(input, "dc_myaccount");
+ if(cq!=null){
+ return '<span class="nscontent">' + cq.question + '</span><span style="display:none;" class="nscontent cons_id" data-ci="' + cq.consentQuestionId+ '"></span>';
+ }
+ cq = getConsent(input, "gdpr_cmplnt_dscr");
+ if(cq!=null){
+ return '<span class="nscontent">' + cq.question + '</span><span style="display:none;" class="nscontent cons_id" data-ci="' + cq.consentQuestionId+ '"></span>';
+ }
+  cq = getConsent(input, "commerce_nl_je");
+ if(cq!=null){
+ return '<span class="nscontent">' + cq.question + '</span><span style="display:none;" class="nscontent cons_id" data-ci="' + cq.consentQuestionId+ '"></span>';
+ }
+  cq = getConsent(input, "generic_optin");
+ if(cq!=null){
+ return '<span class="nscontent">' + cq.question + '</span><span style="display:none;" class="nscontent cons_id" data-ci="' + cq.consentQuestionId+ '"></span>';
+ }
+   return '';
+}
+
+
+
+function getConsent(myarray, flavour){
+ for(var i = 0; i < myarray.length; i++)
+ {
+   if(myarray[i].flavour == flavour || flavour=='' )
+   {
+     return myarray[i];
+   }
+ }
+}
+
+var myHelpers = {getQuestion: getConsentQuestion};
+ // Render the template with the movies data and insert
+ // the rendered HTML under the "newsletterList" element
+ jQuery( "#newsletterList" ).html(
+ jQuery( "#newsletterTemplate" ).render( newsletter , myHelpers )
+ );
+
+ jQuery( ".go" ).click(function(event) {
+ if(validateEmail(jQuery( "#MAIL" ).first().val())){
+ email = jQuery("#MAIL").val();
+ subscribe(jQuery("#mc_embed_signup").data( "ns" ), email, jQuery(".cons_id:first").data( "ci" ), event);
+ }else{
+ jQuery("#MAIL").css("border", "1px solid #ff0000");
+ }
+ });
+ jQuery( ".dok" ).click(function(event) {
+ unsubscribe(jQuery("#mc_embed_signup").data( "ns" ), email, jQuery(".cons_id:first").data( "ci" ), event);
+
+ });
+ function unsubscribe(newsletter, email, cqid, event){
+ var rand = Math.floor((Math.random() * 1000000) + 1);
+
+
+ jQuery.get("https://ims.parool.nl/renderer/empty.aspx?ID=s6Xs2Bi7ZoPP3MFuZnHcGY48LUmPOdw1GorhCwxDCMnQWzOIIvvhL23NZhkSxIkoyFe9P_Pe%2B%2BZjKuyUcS&SP2=" + encodeURIComponent(email) + "&SP3=" + newsletter + "&SP4=" + cqid + "&SP5=" + rand + "&SP6=" + encodeURIComponent(document.location) + "&SP8=&REFERENCE=signup_form", 
+ function( data ) {
+ if(data=='ok'){
+ jQuery( ".ok" ).hide();
+ jQuery( ".submit" ).show();
+ }else{
+ jQuery( ".dok_extra" ).html("<span style='color:red'>Onverwachte fout</span>");
+ }
+ });
+
+ }
+
+ function subscribe(newsletter, email, cqid, event){
+ var rand = Math.floor((Math.random() * 1000000) + 1);
+
+
+ jQuery.get("https://ims.parool.nl/renderer/empty.aspx?ID=w_1w30f10RZJnzaBrz%2B8wq5Yd1OnCd9K6DZDkcfsKdkm4nEMNIuTEvxVXDSoZAQQabDUxVUNH4GXt1hm45&SP2=" + encodeURIComponent(email) + "&SP3=" + newsletter + "&SP4=" + cqid + "&SP5=" + rand + "&SP6=" + encodeURIComponent(document.location) + "&SP8=&REFERENCE=signup_form", 
+ function( data ) {
+ if(data=='ok'){
+ jQuery( ".submit" ).hide();
+ jQuery( ".ok" ).show();
+ }else{
+ jQuery( "#MAIL" ).first().css("border", "1px solid #ff0000");
+ }
+ });
+
+
+ }
+ function validateEmail(email) {
+     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     return re.test(email);
+ }
+  jQuery( function() {
+ jQuery( ".optouttxt" ).each(function() {
+   var txt = jQuery(this).text();
+ if(txt==''){
+ jQuery(this).text('Uitschrijven');
+ }
+ });
+
+ jQuery( ".subscribe" ).trigger( "click" );
+
+  } );
+
+function resize() {
+  var height = jQuery("#newsletterList").height();
+  window.parent.postMessage(["setHeight", height, "sim_7369848649_1"], "*"); 
+}
+
+window.addEventListener('resize', function(event){
+ resize();
+});
+
+
+</script><!-- theme styling --><style>
+
+ /* specific */
+
+.button {
+    background-color: #d72236;
+}
+
+.button:active, .button:focus, .button:hover {
+    background-color: #d72236;
+}
+
+.newsletter__confirmation:before {
+ color: #d72236;
+}
+html, body{
+ background-color: #f2f2f2;
+}
+</style>
+  </body></html>
